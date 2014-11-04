@@ -58,9 +58,9 @@ def getDay(day):
 		
 # 8-10 numbrite genereerimine
 def getRandom():
-	random_number_1 = randint(0, 9)
-	random_number_2 = randint(0, 9)
-	random_number_3 = randint(0, 9)
+	random_number_1 = randint(1, 9)
+	random_number_2 = randint(1, 9)
+	random_number_3 = randint(1, 9)
 	return '%s%s%s' % (random_number_1, random_number_2, random_number_3)
 
 # 11 numbri genereerimine: checksum
@@ -94,7 +94,7 @@ def get_random_ik():
 	month = randint(1, 12)
 	day = randint(1, days[month])
 	if month == 2 and year %4 ==0 and year %100 != 0: # leap year
-		day = randint(1, 28)
+		day = randint(1, 29)
 	return generate_ik(sex, year, month, day)
 
 # https://docs.python.org/2/library/__main__.html	
